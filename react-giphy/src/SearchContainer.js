@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 
 
 
-class GiphyContainer extends Component {
+class SearchContainer extends Component {
 
-  constructor(props) {
-    console.log("contructor() in GiphyContainer is running");    
-    super(props)
+  constructor() {  
+    super()
 
     this.state = {
-      search: ''
+      gifs: ''
     }
   }
 
@@ -21,14 +20,16 @@ class GiphyContainer extends Component {
 
   handleSubmit=(event)=>{
     event.preventDefault()
-    this.props.Search(this.state.query)
+    this.props.Search(this.state.search)
     
   }
 
+
+
   render() {
-    console.log("render() in GiphyContainer is running");
+    console.log("render() in SearchContainer is running");
     return (
-      <div className="GiphyContainer">
+      <div className="SearchContainer">
         <h2>Search Giphy</h2>
           <form>
             <div>
@@ -50,4 +51,4 @@ class GiphyContainer extends Component {
 }
 
 
-export default GiphyContainer
+export default SearchContainer

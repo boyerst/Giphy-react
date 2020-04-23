@@ -1,29 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import GiphyContainer from './GiphyContainer'
+import GifContainer from './GifContainer'
 
 class App extends Component {
-  
-  constructor() {
-    console.log("constructor() in App.js is running")
-    super()
-    this.state={
-      gifs:[],
-  
-    }
-  }
-
-
-
-
-
-
 
 
   render() {
     return (
-      <div className="giphyContainer">
-        <GiphyContainer search={this.search}/>
+      <div className="gifContainer">
+        <GifContainer />
       </div>
     );
   }
