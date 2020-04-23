@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="giphyContainer">
-        <GiphyContainer />
+        <GiphyContainer search={this.search}/>
       </div>
     );
   }

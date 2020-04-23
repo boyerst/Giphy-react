@@ -9,10 +9,21 @@ class GiphyContainer extends Component {
     super(props)
 
     this.state = {
-      
+      search: ''
     }
   }
 
+  handleChange =(event)=>{
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit=(event)=>{
+    event.preventDefault()
+    this.props.Search(this.state.query)
+    
+  }
 
   render() {
     console.log("render() in GiphyContainer is running");
@@ -25,6 +36,7 @@ class GiphyContainer extends Component {
               type="text"
               name="search"
               placeholder="Search for GIFs"
+              onChange={this.handleChange}
               />
             </div>
             <div>
