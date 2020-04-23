@@ -9,7 +9,7 @@ class GiphyContainer extends Component {
     super(props)
 
     this.state = {
-      gifs: [] 
+      
     }
   }
 
@@ -17,11 +17,21 @@ class GiphyContainer extends Component {
   render() {
     console.log("render() in GiphyContainer is running");
     return (
-      <React.Fragment>
-        <p>GiphyContainer</p>
-        <p><small>Search Gifs</small></p>
-    
-      </React.Fragment>
+      <div className="GiphyContainer">
+        <h2>Search Giphy</h2>
+          <form>
+            <div>
+              <input 
+              type="text"
+              name="search"
+              placeholder="Search for GIFs"
+              />
+            </div>
+            <div>
+              <button>Search</button>
+            </div>
+          </form>
+        </div>
     )
   }
 
